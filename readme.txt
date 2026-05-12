@@ -24,6 +24,10 @@ You can also use the symbol manually – just add a special class `ym-byn-symbol
 
 `<span class="ym-byn-symbol">10 BYN</span>`
 
+== Screenshots ==
+
+1. WooCommerce Status dashboard widget.
+
 == Changelog ==
 
 = 1.0.0 =
