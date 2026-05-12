@@ -5,7 +5,7 @@
 * Description:       Displays the official Belarusian currency symbol on your site.
 * Version:           1.0.0
 * Requires PHP:      7.0
-* Requires at least: 2.8
+* Requires at least: 4.6
 * Tested up to:      6.9
 * Author:            Yan Metelitsa
 * Author URI:        https://yanmet.com/
