@@ -2,11 +2,11 @@
 
 /*
 * Plugin Name:       YM BYN Symbol
-* Description:       Displays the official Belarusian currency symbol on your site.
+* Description:       Provides the capability to display the Belarusian ruble symbol on your website.
 * Version:           1.0.0
 * Requires PHP:      7.0
 * Requires at least: 4.6
-* Tested up to:      6.9
+* Tested up to:      7.0
 * Author:            Yan Metelitsa
 * Author URI:        https://yanmet.com/
 * License:           GPLv3
