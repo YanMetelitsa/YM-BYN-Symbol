@@ -4,7 +4,7 @@
   unicode-range: U+E901, U+42, U+59, U+4E;
 }
 .ym-byn-symbol,
-.woocommerce-Price-currencySymbol {
+body.wc-byn-currency .woocommerce-Price-currencySymbol {
   vertical-align: baseline;
   font-family: "nbrb" !important;
   font-variant: normal;

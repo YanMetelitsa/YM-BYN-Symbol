@@ -3,7 +3,7 @@
 /*
 * Plugin Name:       YM BYN Symbol
 * Description:       Provides the capability to display the Belarusian ruble symbol on your website.
-* Version:           1.0.0
+* Version:           1.0.1
 * Requires PHP:      7.0
 * Requires at least: 4.6
 * Tested up to:      7.1
@@ -31,8 +31,17 @@ define( 'YMBYN_ROOT_URI', plugin_dir_url( __FILE__ ) );
 function ymbyn_enqueue_scripts () {
 	wp_enqueue_style( 'ymbyn-style', YMBYN_ROOT_URI . 'assets/css/ymbyn.css', [], YMBYN_PLUGIN_DATA[ 'Version' ] );
 }
-add_action( 'wp_enqueue_scripts', 'ymbyn_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts',    'ymbyn_enqueue_scripts' );
 add_action( 'admin_enqueue_scripts', 'ymbyn_enqueue_scripts' );
+
+// Modifies `<body>` class list.
+add_filter( 'body_class', function ( array $classes ) {
+	if ( class_exists( 'WooCommerce' ) && 'BYN' === get_woocommerce_currency_symbol() ) { // phpcs:ignore
+		$classes[] = 'wc-byn-currency';
+	}
+
+	return $classes;
+});
 
 // Modifies WooCommerce Currency symbol.
 add_filter( 'woocommerce_currency_symbol', function ( string $currency_symbol, string $currency ) : string {
