@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* BYN Font */
+@font-face {
+  font-family: "nbrb-byn";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/nbrb-byn.woff2") format("woff2"), url("../fonts/nbrb-byn.ttf") format("truetype"), url("../fonts/nbrb-byn.woff") format("woff");
+  unicode-range: U+E901, U+42, U+59, U+4E;
+}
+/* ƃ Font */
+@font-face {
+  font-family: "nbrb-b";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/nbrb-b.woff2") format("woff2"), url("../fonts/nbrb-b.ttf") format("truetype"), url("../fonts/nbrb-b.woff") format("woff");
+  unicode-range: U+0183;
+}
+/* Admin Global Font */
+body {
+  font-family: "nbrb-b", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/*# sourceMappingURL=ym-byn-symbol-admin.css.map */
