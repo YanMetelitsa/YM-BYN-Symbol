@@ -22,5 +22,8 @@ You can also use the symbol manually – just add a special class `ym-byn-symbol
 
 # Changelog
 
+## 1.0.1
+* Multi-currency support
+
 ## 1.0.0
 * Initial release
