@@ -1,6 +1,6 @@
 === YM BYN Symbol ===
 Contributors: yanmetelitsa
-Tags: belarusian, ruble, symbol, currency, woocommerce
+Tags: byn, symbol, currency, woocommerce
 Stable tag: 1.1.0
 Requires PHP: 7.0
 Requires at least: 4.6
@@ -8,7 +8,7 @@ Tested up to: 7.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Automatically adds the new Belarusian ruble currency symbol to your website, with an option for manual use.
+Automatically adds the new Belarusian ruble currency symbol to your site, with full WooCommerce support and an option for manual use.
 
 == Description ==
 
