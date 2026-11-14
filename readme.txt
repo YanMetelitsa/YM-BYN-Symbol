@@ -37,7 +37,9 @@ You can also use the symbol manually – add the `ym-byn-symbol` class to any el
 
 In the admin area, just use the "ƃ" symbol anywhere, nothing else is required:
 
-`<span>10 ƃ</span>`
+`
+<span>10 ƃ</span>
+`
 
 === Support ===
 
