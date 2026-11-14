@@ -64,12 +64,12 @@ For manual use, replace the `ym-byn-symbol` class with `ym-byn-symbol-b` and use
 
 This is the main drawback of the three-character method. With this method, the plugin applies `font-size: 125%` to the symbol, which works well with most fonts. However, if the symbol appears smaller or larger than the surrounding text with your font, simply adjust the values for your site:
 
-`
+```css
 .ym-byn-symbol,
 body.wc-byn-currency .woocommerce-Price-currencySymbol {
 	font-size: 120%;
 }
-`
+```
 
 If you are still not satisfied with the result, you can also switch to the single-character method, which does not have this issue. However, this method is not recommended due to its negative impact on SEO.
 
@@ -77,12 +77,12 @@ If you are still not satisfied with the result, you can also switch to the singl
 
 On the frontend, for elements containing more than just the "BYN" string (e.g. `<select>`), use the "ƃ" symbol instead of "BYN", than manually set the "nbrb-b" currency font family via CSS and include your site font (the `--your-site-font-family` variable is used in the example):
 
-`
+```html
 <select style="font-family: 'nbrb-b', var( --your-site-font-family )">
 	<option>ƃ – BYN</option>
 	<option>₽ – RUB</option>
 </select>
-`
+```
 
 # Changelog
 
