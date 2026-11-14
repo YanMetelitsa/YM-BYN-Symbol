@@ -92,6 +92,7 @@ On the frontend, for elements containing more than just the "BYN" string (e.g. `
 3. Product cards
 4. Single product page
 5. Product cards with different price types
+6. WooCommerce analytics
 
 == Changelog ==
 
