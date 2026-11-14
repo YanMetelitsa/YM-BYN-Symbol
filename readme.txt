@@ -1,7 +1,7 @@
 === YM BYN Symbol ===
 Contributors: yanmetelitsa
 Tags: byn, symbol, currency, woocommerce
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Requires PHP: 7.0
 Requires at least: 4.6
 Tested up to: 7.1
@@ -20,26 +20,63 @@ This plugin requires no special skills or customizations and has absolutely no i
 
 - Lightweight, Simple, and Flexible
 - Uses **Official Assets**
-- Optimized for Search Engines
+- Optimized for **Search Engines**
 - Optimized for **Multi-Currency** Websites
 - Compatible With or Without **WooCommerce**
 - No Ads or Promos
 
-=== How to Use? ===
+=== WooCommerce Use ===
 
-Using **WooCommerce**? Simply pick "Belarusian Ruble" in your currency settings, activate **YM BYN Symbol**, and you're all set — the new symbol appears automatically across the entire site.
+Using WooCommerce? Simply pick **"Belarusian Ruble"** in your currency settings, activate **YM BYN Symbol**, and you're all set – the new symbol appears automatically across the entire site.
 
 === Manual Use ===
 
-You can also use the symbol manually – add the `ym-byn-symbol` class to any element with the "BYN" string. For example:
+You can also use the symbol manually – add the `ym-byn-symbol` class to any element contains "BYN" string. For example:
 
 `<span>10 <span class="ym-byn-symbol">BYN</span></span>`
 
-In the admin panel, just use the "ƃ" symbol:
+In the admin area, just use the "ƃ" symbol anywhere, nothing else is required:
 
 `<span>10 ƃ</span>`
 
-On the frontend, for elements containing more than just the "BYN" string (e.g., `<select>`), use the "ƃ" symbol instead of "BYN", manually set the currency font family via CSS and include your site font (the `--your-site-font-family` variable is used in the example):
+=== Support ===
+
+If you encounter any difficulties implementing the currency symbol on your site, please use [the plugin's support forum](https://wordpress.org/support/plugin/ym-byn-symbol/) — I'll be happy to help.
+
+== Frequently Asked Questions ==
+
+= Which symbol style does the plugin use? =
+
+The plugin uses two display methods: a three-character form (BYN) on the frontend and a single-character form (ƃ) in the admin area. The three-character form offers better SEO, is easier for users to copy, and is recommended by the National Bank of the Republic of Belarus. The single-character form is used in the admin area because it is more convenient there, and SEO is not a concern in that context.
+
+= What if I want to use the single-character form on the frontend? =
+
+If you use WooCommerce, simply add the following code to your theme:
+
+`add_filter( 'ym_byn_symbol_wc_use_frontend_b', '__return_true' );`
+
+The "ƃ" symbol will then be used across your entire site.
+
+For manual use, replace the `ym-byn-symbol` class with `ym-byn-symbol-b` and use the "ƃ" symbol accordingly:
+
+`<span>10 <span class="ym-byn-symbol-b">ƃ</span></span>`
+
+= What should I do if the currency symbol's height differs from the rest of the text? =
+
+This is the main drawback of the three-character method. With this method, the plugin applies `font-size: 125%` to the symbol, which works well with most fonts. However, if the symbol appears smaller or larger than the surrounding text with your font, simply adjust the values for your site:
+
+`
+.ym-byn-symbol,
+body.wc-byn-currency .woocommerce-Price-currencySymbol {
+	font-size: 120%;
+}
+`
+
+If you are still not satisfied with the result, you can also switch to the single-character method, which does not have this issue. However, this method is not recommended due to its negative impact on SEO.
+
+= How to use symbol in dynamic elements? =
+
+On the frontend, for elements containing more than just the "BYN" string (e.g. `<select>`), use the "ƃ" symbol instead of "BYN", than manually set the "nbrb-b" currency font family via CSS and include your site font (the `--your-site-font-family` variable is used in the example):
 
 `
 <select style="font-family: 'nbrb-b', var( --your-site-font-family )">
@@ -47,10 +84,6 @@ On the frontend, for elements containing more than just the "BYN" string (e.g., 
 	<option>₽ – RUB</option>
 </select>
 `
-
-=== Support ===
-
-If you encounter any difficulties manually implementing the currency symbol on your site, please use [the plugin's support forum](https://wordpress.org/support/plugin/ym-byn-symbol/) — I'll be happy to help.
 
 == Screenshots ==
 
@@ -62,11 +95,22 @@ If you encounter any difficulties manually implementing the currency symbol on y
 
 == Changelog ==
 
-= 1.1.0 =
-* New flexible core
+= 1.2.0 =
+
+*Added*
+
+* The option to use a single-character method in the frontend (see the plugin description)
+
+*Fixed*
+
+* Height of the currency symbol
 
 = 1.0.1 =
-* Multi-currency support
+
+*Added*
+
+* Support for multi-currency websites
 
 = 1.0.0 =
+
 * Initial release

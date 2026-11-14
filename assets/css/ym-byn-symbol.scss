@@ -4,14 +4,14 @@
 .ym-byn-symbol,
 body.wc-byn-currency .woocommerce-Price-currencySymbol {
 	font-family:   'nbrb-byn' !important;
-	font-variant:   normal;
+	font-variant:   inherit;
 	font-weight:    inherit;
 	font-style:     inherit;
 	font-size:      125%;
 
 	vertical-align: baseline;
-	letter-spacing: normal;
-	line-height:    inherit;
+	letter-spacing: inherit;
+	line-height:    1;
 	text-transform: none;
 	speak:          none;
 
@@ -26,4 +26,11 @@ body.wc-byn-currency .woocommerce-Price-currencySymbol {
 
 	-webkit-font-smoothing:  antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Frontend ƃ Symbol */
+.ym-byn-symbol-b,
+body.wc-byn-currency.ym-byn-symbol-wc-use-b .woocommerce-Price-currencySymbol {
+	font-family: 'nbrb-b' !important;
+	font-size: inherit;
 }

@@ -3,10 +3,9 @@
 /*
 * Plugin Name:       YM BYN Symbol
 * Description:       Automatically adds the new Belarusian ruble currency symbol to your site, with full WooCommerce support and an option for manual use.
-* Version:           1.1.0
+* Version:           1.2.0
 * Requires PHP:      7.0
 * Requires at least: 4.6
-* Tested up to:      7.1
 * Author:            Yan Metelitsa
 * Author URI:        https://yanmet.com/
 * License:           GPLv3
@@ -38,13 +37,27 @@ add_action( 'admin_enqueue_scripts', function () {
 
 // Modifies WooCommerce Currency symbol.
 add_filter( 'woocommerce_currency_symbol', function ( string $currency_symbol, string $currency ) : string {
-	return 'BYN' === $currency ? ( is_admin() ? 'ƃ' : 'BYN' ) : $currency_symbol;
+	if ( 'BYN' !== $currency ) {
+		return $currency_symbol;
+	}
+
+	$use_frontend_b = apply_filters( 'ym_byn_symbol_wc_use_frontend_b', false );
+
+	return ( is_admin() || $use_frontend_b ) ? 'ƃ' : 'BYN';
 }, 20, 2 );
 
 // Modifies `<body>` class.
 function ym_byn_symbol_body_class ( $classes ) {
-	if ( class_exists( 'WooCommerce' ) && in_array( get_woocommerce_currency_symbol(), [ 'BYN', 'ƃ' ] ) ) { // phpcs:ignore
+	if ( ! function_exists( 'get_woocommerce_currency_symbol' ) ) {
+		return $classes;
+	}
+
+	if ( in_array( get_woocommerce_currency_symbol(), [ 'BYN', 'ƃ' ] ) ) {
 		$new_class = 'wc-byn-currency';
+
+		if ( 'ƃ' === get_woocommerce_currency_symbol() ) {
+			$new_class .= ' ym-byn-symbol-wc-use-b';
+		}
 
 		if ( is_array( $classes ) ) {
 			$classes[] = $new_class;
