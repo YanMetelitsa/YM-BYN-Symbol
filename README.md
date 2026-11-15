@@ -24,13 +24,13 @@ This plugin requires no special skills or customizations and has absolutely no i
 - Compatible With or Without **WooCommerce**
 - No Ads or Promos
 
-## WooCommerce Use
+## Using with WooCommerce
 
-Using WooCommerce? Simply pick **"Belarusian Ruble"** in your currency settings, activate **YM BYN Symbol**, and you're all set – the new symbol appears automatically across the entire site.
+Using WooCommerce? Simply select **"Belarusian Ruble"** in your currency settings, activate **YM BYN Symbol**, and you're all set – the new symbol appears automatically across the entire site.
 
-## Manual Use
+## Manual Usage
 
-You can also use the symbol manually – add the `ym-byn-symbol` class to any element contains "BYN" string. For example:
+You can also use the symbol manually – add the `ym-byn-symbol` class to any element containing the "BYN" string. For example:
 
 `<span>10 <span class="ym-byn-symbol">BYN</span></span>`
 
@@ -46,13 +46,13 @@ If you encounter any difficulties implementing the currency symbol on your site,
 
 ## Which symbol style does the plugin use?
 
-The plugin uses two display methods: a three-character form (BYN) on the frontend and a single-character form (ƃ) in the admin area.
+The plugin uses two display methods: a three-character form (BYN) on the front end and a single-character form (ƃ) in the admin area.
 
 The three-character form offers better SEO, is easier for users to copy, and is recommended by the National Bank of the Republic of Belarus.
 
 The single-character form is used in the admin area because it is more convenient there, and SEO is not a concern in that context.
 
-## What if I want to use the single-character form on the frontend?
+## What if I want to use the single-character form on the front end?
 
 If you use WooCommerce, simply add the following code to your theme:
 
@@ -72,14 +72,17 @@ This is the main drawback of the three-character method. With this method, the p
 .ym-byn-symbol,
 body.wc-byn-currency .woocommerce-Price-currencySymbol {
 	font-size: 120%;
+	line-height: 80%;
 }
 ```
+
+The main rule is that the sum of the `font-size` and `line-height` values ​​must equal 200%.
 
 If you are still not satisfied with the result, you can also switch to the single-character method, which does not have this issue. However, this method is not recommended due to its negative impact on SEO.
 
 ## How to use symbol in dynamic elements?
 
-On the frontend, for elements containing more than just the "BYN" string (e.g. `<select>`), use the "ƃ" symbol instead of "BYN", than manually set the "nbrb-b" currency font family via CSS and include your site font (the `--your-site-font-family` variable is used in the example):
+On the front end, for elements containing more than just the "BYN" string (e.g. `<select>`), use the "ƃ" symbol instead of "BYN", than manually set the "nbrb-b" currency font family via CSS and include your site font (the `--your-site-font-family` variable is used in the example):
 
 ```html
 <select style="font-family: 'nbrb-b', var( --your-site-font-family )">
@@ -90,15 +93,17 @@ On the frontend, for elements containing more than just the "BYN" string (e.g. `
 
 # Changelog
 
-## 1.2.0
-
-*Added*
-
-* The option to use a single-character method in the frontend (see the plugin description)
+## 1.2.1
 
 *Fixed*
 
 * Height of the currency symbol
+
+## 1.2.0
+
+*Added*
+
+* The option to use the single-character method on the front end (see the plugin description)
 
 ## 1.0.1
 

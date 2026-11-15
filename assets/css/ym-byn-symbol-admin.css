@@ -17,9 +17,15 @@
   src: url("../fonts/nbrb-b.woff2") format("woff2"), url("../fonts/nbrb-b.ttf") format("truetype"), url("../fonts/nbrb-b.woff") format("woff");
   unicode-range: U+0183;
 }
-/* Admin Global Font */
+/* Admin area */
 body {
   font-family: "nbrb-b", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* WooCommerce */
+/* Old Analytics */
+.woocommerce-reports-wide .postbox .chart-legend li strong, .woocommerce-reports-wrap .postbox .chart-legend li strong {
+  font-family: "nbrb-b", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", sans-serif !important;
 }
 
 /*# sourceMappingURL=ym-byn-symbol-admin.css.map */

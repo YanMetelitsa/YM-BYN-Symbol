@@ -17,7 +17,7 @@
   src: url("../fonts/nbrb-b.woff2") format("woff2"), url("../fonts/nbrb-b.ttf") format("truetype"), url("../fonts/nbrb-b.woff") format("woff");
   unicode-range: U+0183;
 }
-/* Frontend Symbol */
+/* Front end BYN */
 .ym-byn-symbol,
 body.wc-byn-currency .woocommerce-Price-currencySymbol {
   font-family: "nbrb-byn" !important;
@@ -27,7 +27,7 @@ body.wc-byn-currency .woocommerce-Price-currencySymbol {
   font-size: 125%;
   vertical-align: baseline;
   letter-spacing: inherit;
-  line-height: 1;
+  line-height: 75%;
   text-transform: none;
   speak: none;
   -webkit-font-feature-settings: "liga";
@@ -41,11 +41,12 @@ body.wc-byn-currency .woocommerce-Price-currencySymbol {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Frontend ƃ Symbol */
+/* Front end ƃ */
 .ym-byn-symbol-b,
 body.wc-byn-currency.ym-byn-symbol-wc-use-b .woocommerce-Price-currencySymbol {
   font-family: "nbrb-b" !important;
   font-size: inherit;
+  line-height: inherit;
 }
 
 /*# sourceMappingURL=ym-byn-symbol.css.map */

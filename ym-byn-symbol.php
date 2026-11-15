@@ -3,7 +3,7 @@
 /*
 * Plugin Name:       YM BYN Symbol
 * Description:       Automatically adds the new Belarusian ruble currency symbol to your site, with full WooCommerce support and an option for manual use.
-* Version:           1.2.0
+* Version:           1.2.1
 * Requires PHP:      7.0
 * Requires at least: 4.6
 * Author:            Yan Metelitsa
