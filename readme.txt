@@ -31,11 +31,11 @@ Using WooCommerce? Simply select **"Belarusian Ruble"** in your currency setting
 
 === Manual Usage ===
 
-You can also use the symbol manually – add the `ym-byn-symbol` class to any element containing the "BYN" string. For example:
+You can also use the symbol manually – add the **`ym-byn-symbol`** class to any element containing the **"BYN"** string. For example:
 
 `<span>10 <span class="ym-byn-symbol">BYN</span></span>`
 
-In the admin area, just use the "ƃ" symbol anywhere, nothing else is required:
+In the **admin area**, just use the **"ƃ"** symbol anywhere, nothing else is required:
 
 `
 <span>10 ƃ</span>
@@ -51,19 +51,17 @@ If you encounter any difficulties implementing the currency symbol on your site,
 
 The plugin uses two display methods: a three-character form (BYN) on the front end and a single-character form (ƃ) in the admin area.
 
-The three-character form offers better SEO, is easier for users to copy, and is recommended by the National Bank of the Republic of Belarus.
+**The three-character form** offers better SEO, is easier for users to copy, and is recommended by the National Bank of the Republic of Belarus.
 
-The single-character form is used in the admin area because it is more convenient there, and SEO is not a concern in that context.
+**The single-character form** is used in the admin area because it is more convenient there, and SEO is not a concern in that context.
 
 = What if I want to use the single-character form on the front end? =
 
-If you use WooCommerce, simply add the following code to your theme:
+If you use **WooCommerce**, simply add the following code to your theme, the "ƃ" symbol will then be used across your entire site:
 
 `add_filter( 'ym_byn_symbol_wc_use_frontend_b', '__return_true' );`
 
-The "ƃ" symbol will then be used across your entire site.
-
-For manual use, replace the `ym-byn-symbol` class with `ym-byn-symbol-b` and use the "ƃ" symbol accordingly:
+For **manual use**, replace the `ym-byn-symbol` class with `ym-byn-symbol-b` and use the "ƃ" symbol accordingly:
 
 `<span>10 <span class="ym-byn-symbol-b">ƃ</span></span>`
 
@@ -79,7 +77,7 @@ body.wc-byn-currency .woocommerce-Price-currencySymbol {
 }
 `
 
-The main rule is that the sum of the `font-size` and `line-height` values ​​must equal 200%.
+**The main rule** is that the sum of the `font-size` and `line-height` values ​​must equal 200%.
 
 If you are still not satisfied with the result, you can also switch to the single-character method, which does not have this issue. However, this method is not recommended due to its negative impact on SEO.
 
