@@ -49,9 +49,8 @@ If you encounter any difficulties implementing the currency symbol on your site,
 
 The plugin uses two display methods: a three-character form (BYN) on the front end and a single-character form (ƃ) in the admin area.
 
-**The three-character form** offers better SEO, is easier for users to copy, and is recommended by the National Bank of the Republic of Belarus.
-
-**The single-character form** is used in the admin area because it is more convenient there, and SEO is not a concern in that context.
+- **The three-character form** offers better SEO, is easier for users to copy, and is recommended by the National Bank of the Republic of Belarus.
+- **The single-character form** is used in the admin area because it is more convenient there, and SEO is not a concern in that context.
 
 </details>
 
